@@ -4,6 +4,7 @@ import App from './App.vue'
 import { App as AppAntd, Button, ConfigProvider } from 'ant-design-vue'
 import { router } from './app.router';
 import {createPinia} from 'pinia';
+import 'virtual:uno.css'
 
 const app = createApp(App);
 const pinia = createPinia();

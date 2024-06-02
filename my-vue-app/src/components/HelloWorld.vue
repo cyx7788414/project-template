@@ -27,7 +27,7 @@ const test = useTestStore();
 
   <div class="card">
     <!-- <button type="button" @click="count++">count is {{ count }}</button> -->
-    <a-button type="primary" @click="test.increment()">Primary Button count is {{ test.count }}</a-button>
+    <a-button type="primary" @click="test.increment()" class="m-1">Primry Button count is {{ test.count }}</a-button>
     <p>
       Edit
       <code>components/HelloWorld.vue</code> to test HMR
