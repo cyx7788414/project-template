@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, getCurrentInstance } from 'vue'
 import {App} from 'ant-design-vue';
+import { useTestStore } from '../common/store/test.store';
 
 const {message, notification, modal} = App.useApp();
 
@@ -12,19 +13,21 @@ const { $test } = appContext.config.globalProperties;
 
 console.log($test, $test());
 
-defineProps<{ msg: string }>()
+// defineProps<{ msg: string }>()
 
 const count = ref(0)
 
 console.log(import.meta.env)
+
+const test = useTestStore();
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <!-- <h1>{{ msg }}</h1> -->
 
   <div class="card">
     <!-- <button type="button" @click="count++">count is {{ count }}</button> -->
-    <a-button type="primary" @click="count++">Primary Button count is {{ count }}</a-button>
+    <a-button type="primary" @click="test.increment()">Primary Button count is {{ test.count }}</a-button>
     <p>
       Edit
       <code>components/HelloWorld.vue</code> to test HMR
