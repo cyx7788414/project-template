@@ -1,5 +1,11 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, getCurrentInstance } from 'vue'
+
+const {appContext} = getCurrentInstance()!;
+
+const {$test} = appContext.config.globalProperties;
+
+console.log($test, $test());
 
 defineProps<{ msg: string }>()
 
