@@ -14,7 +14,8 @@
     "pinia": "^2.1.7",
     "unocss": "^0.60.4",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.2"
+    "vue-router": "^4.3.2",
+    "vue-i18n": "^9.13.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",

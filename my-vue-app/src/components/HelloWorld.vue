@@ -10,6 +10,7 @@ console.log(message, notification, modal)
 const { appContext } = getCurrentInstance()!;
 
 const { $test } = appContext.config.globalProperties;
+console.log(appContext)
 
 console.log($test, $test());
 
