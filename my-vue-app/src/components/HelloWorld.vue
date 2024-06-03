@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { ref, getCurrentInstance } from 'vue'
+import { ref, getCurrentInstance } from 'vue';
 
 const {appContext} = getCurrentInstance()!;
 
 const {$test} = appContext.config.globalProperties;
+console.log(appContext)
 
 console.log($test, $test());
 
@@ -16,7 +17,9 @@ console.log(import.meta.env)
 
 <template>
     <h1>{{ msg }}</h1>
-
+    <div>{{$t('test')}}</div>
+    <div>{{$t('test')}}</div>
+    <div>{{ $t('i-dont-know') }}</div>
     <div class="card">
         <button type="button" @click="count++">count is {{ count }}</button>
         <p>
