@@ -27,11 +27,11 @@ app.config.globalProperties.$test = () => new Date();
 // use
 app.use(router);
 app.use(pinia);
+app.use(i18n);
 
 app.use(AppAntd)
 app.use(Button);
 app.use(ConfigProvider);
 
-app.use(i18n);
 
 app.mount('#app');

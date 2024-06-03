@@ -25,7 +25,7 @@ const test = useTestStore();
 
 <template>
   <!-- <h1>{{ msg }}</h1> -->
-
+  <div>{{ $t('test') }}</div>
   <div class="card">
     <!-- <button type="button" @click="count++">count is {{ count }}</button> -->
     <a-button type="primary" @click="test.increment()" class="m-1">Primry Button count is {{ test.count }}</a-button>
